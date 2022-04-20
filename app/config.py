@@ -1,6 +1,5 @@
 import os
 
-
 class Config(object):
     DEBUG = False
     TESTING = False
@@ -11,15 +10,12 @@ class Config(object):
     SQLALCHEMY_DATABASE_URI = "sqlite:///" + os.path.abspath(db_dir)
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
-
 class ProductionConfig(Config):
     pass
-
 
 class DevelopmentConfig(Config):
     DEBUG = True
     SESSION_COOKIE_SECURE = False
-
 
 class TestingConfig(Config):
     TESTING = True
