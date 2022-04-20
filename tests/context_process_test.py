@@ -1,3 +1,4 @@
+'''Tests for things within the page are correct'''
 import datetime
 from os import getenv
 
