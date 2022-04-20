@@ -1,6 +1,8 @@
 Logging
 
+[![Run Tests, Build Dockerfile, Run on Heroku](https://github.com/KirwinAl/auth_flask/actions/workflows/dev.yml/badge.svg?branch=config_log_upgrade)](https://github.com/KirwinAl/auth_flask/actions/workflows/dev.yml)
 
+Link to the site: https://kaa46dev.herokuapp.com
 
 This assignment is more for the logging aspect of the site. 
 I can tell you that the logging information is working correctly and the files are 
