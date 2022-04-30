@@ -17,8 +17,13 @@ def test_create_log_folder():
 
 def test_upload_folder():
     '''Searches if the uploads folder exists'''
+    response = runner.invoke(create_log_folder)
+    assert response.exit_code == 0
+    root = os.path.dirname(os.path.abspath(__file__))
+    # set the name of the apps log folder to logs
+    update_dir = os.path.join(root, '../uploads')
     # make a directory if it doesn't exist
-    assert os.path.exists('./uploads') is True
+    assert os.path.exists(update_dir) is True
 
 def test_upload_file():
     '''Searches if the uploaded file exists'''
