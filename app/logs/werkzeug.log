@@ -222,3 +222,4 @@
 2022-04-30 03:49:42,212 [INFO] werkzeug: 172.19.0.1 - - [30/Apr/2022 03:49:42] "GET /songs HTTP/1.1" 200 -
 2022-04-30 03:49:43,106 [INFO] werkzeug: 172.19.0.1 - - [30/Apr/2022 03:49:43] "GET /users HTTP/1.1" 200 -
 2022-04-30 03:49:43,136 [INFO] werkzeug: 172.19.0.1 - - [30/Apr/2022 03:49:43] "[36mGET /bootstrap/static/icons/bootstrap-icons.svg HTTP/1.1[0m" 304 -
+2022-04-30 03:54:11,560 [INFO] werkzeug:  * Detected change in '/home/myuser/tests/click_test.py', reloading

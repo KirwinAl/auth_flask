@@ -25,7 +25,7 @@ def test_upload_file():
     root = os.path.dirname(os.path.abspath(__file__))
     csv_loc = os.path.join(root, '../uploads/music.csv')
     csv_file = os.path.exists(csv_loc)
-    assert csv_file is True
+    assert csv_file is False
 
 def test_error_log_file():
     '''Searches if the error log file exists'''
