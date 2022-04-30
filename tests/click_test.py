@@ -1,7 +1,7 @@
 '''Testing for files and directories'''
 import os
 from click.testing import CliRunner
-from app import create_log_folder, create_database
+from app import create_log_folder, create_database, create_upload_folder
 runner = CliRunner()
 
 
