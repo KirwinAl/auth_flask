@@ -20,6 +20,13 @@ def test_upload_folder():
     # make a directory if it doesn't exist
     assert os.path.exists('./uploads') is True
 
+def test_upload_file():
+    '''Searches if the uploaded file exists'''
+    root = os.path.dirname(os.path.abspath(__file__))
+    csv_loc = os.path.join(root, '../uploads/music.csv')
+    csv_file = os.path.exists(csv_loc)
+    assert csv_file is True
+
 def test_error_log_file():
     '''Searches if the error log file exists'''
     root = os.path.dirname(os.path.abspath(__file__))
