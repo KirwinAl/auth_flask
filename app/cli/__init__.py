@@ -16,6 +16,16 @@ def create_database():
         os.mkdir(dbdir)
     db.create_all()
 
+@click.command(name = 'create-upload')
+@with_appcontext
+def create_upload_folder():
+    # get root directory of project
+    root = os.path.dirname(os.path.abspath(__file__))
+    # set the name of the apps log folder to logs
+    uploaddir = os.path.join(root, '../../uploads')
+    # make a directory if it doesn't exist
+    if not os.path.exists(uploaddir):
+        os.mkdir(uploaddir)
 
 @click.command(name='create-log-folder')
 @with_appcontext

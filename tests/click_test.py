@@ -15,6 +15,11 @@ def test_create_log_folder():
     # make a directory if it doesn't exist
     assert os.path.exists(logdir) is True
 
+def test_upload_folder():
+    '''Searches if the uploads folder exists'''
+    # make a directory if it doesn't exist
+    assert os.path.exists('./uploads') is True
+
 def test_error_log_file():
     '''Searches if the error log file exists'''
     root = os.path.dirname(os.path.abspath(__file__))

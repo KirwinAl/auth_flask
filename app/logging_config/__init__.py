@@ -33,7 +33,7 @@ def configure_logging():
     logging.config.dictConfig(LOGGING_CONFIG)
     log = logging.getLogger("myApp")
     log.info("My App Logger")
-    log = logging.getLogger("myerrors")
+    log = logging.getLogger("myErrors")
     log.info("This broke")
 
 LOGGING_CONFIG = {
@@ -125,7 +125,7 @@ LOGGING_CONFIG = {
             'level': 'DEBUG',
             'propagate': False
         },
-        'myerrors': {  # if __name__ == '__main__'
+        'myErrors': {  # if __name__ == '__main__'
             'handlers': ['file.handler.errors'],
             'level': 'DEBUG',
             'propagate': False

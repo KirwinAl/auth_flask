@@ -10,7 +10,7 @@ from flask_wtf.csrf import CSRFProtect
 
 from app.auth import auth
 from app.songs import songs
-from app.cli import create_database, create_log_folder
+from app.cli import create_database, create_log_folder, create_upload_folder
 from app.context_processors import utility_text_processors
 from app.db import db
 from app.db.models import User
@@ -48,6 +48,7 @@ def create_app():
     app.context_processor(utility_text_processors)
     # add command function to cli commands
     app.cli.add_command(create_database)
+    app.cli.add_command(create_upload_folder)
     app.cli.add_command(create_log_folder)
     db.init_app(app)
     # Run once at startup:

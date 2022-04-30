@@ -9,8 +9,13 @@ def test_request_main_menu_links(client):
 
 def test_auth_pages(client):
     """This makes the index page"""
+    #200 is OK, 302 is Access Denied
     response = client.get("/dashboard")
     assert response.status_code == 302
+    response = client.get("/songs/upload")
+    assert response.status_code == 302
+    response = client.get("/songs")
+    assert response.status_code == 200
     response = client.get("/register")
     assert response.status_code == 200
     response = client.get("/login")
