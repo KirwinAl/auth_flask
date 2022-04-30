@@ -14,8 +14,6 @@ def test_auth_pages(client):
     assert response.status_code == 302
     response = client.get("/songs/upload")
     assert response.status_code == 302
-    response = client.get("/songs")
-    assert response.status_code == 200
     response = client.get("/register")
     assert response.status_code == 200
     response = client.get("/login")
