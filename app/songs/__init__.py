@@ -44,7 +44,7 @@ def songs_upload():
 
         current_user.songs = list_of_songs
         db.session.commit()
-        log.info(user, 'has uploaded their music list: ' + filename)
+        log.info(user, 'has uploaded a csv file' )
         return redirect(url_for('songs.songs_browse'))
     try:
         return render_template('upload.html', form=form)

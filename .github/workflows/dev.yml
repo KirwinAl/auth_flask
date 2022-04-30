@@ -3,12 +3,12 @@ name: Run Tests, Build Dockerfile, Run on Heroku
 on:
   push:
     branches:
-      - 'config_log_upgrade'
+      - 'flask_upload'
     tags:
       - 'v*'
   pull_request:
     branches:
-      - 'config_log_upgrade'
+      - 'flask_upload'
 #Run tests, not used on live
 jobs:
   runtest:
