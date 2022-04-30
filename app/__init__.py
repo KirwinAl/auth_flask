@@ -20,7 +20,6 @@ from app.simple_pages import simple_pages
 
 login_manager = flask_login.LoginManager()
 
-
 def create_app():
     """Create and configure an instance of the Flask application."""
     app = Flask(__name__)
@@ -42,7 +41,6 @@ def create_app():
     # these load functions with web interface
     app.register_blueprint(simple_pages)
     app.register_blueprint(auth)
-
     # these load functionality without a web interface
     app.register_blueprint(log_con)
     app.register_blueprint(error_handlers)
@@ -53,9 +51,7 @@ def create_app():
     app.cli.add_command(create_log_folder)
     db.init_app(app)
     # Run once at startup:
-
     return app
-
 
 @login_manager.user_loader
 def user_loader(user_id):
