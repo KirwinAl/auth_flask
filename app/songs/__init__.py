@@ -31,7 +31,7 @@ def songs_browse(page):
 def songs_upload():
     form = csv_upload()
     if form.validate_on_submit():
-        log = logging.getLogger("myApp")
+        log = logging.getLogger("request")
         filename = secure_filename(form.file.data.filename)
         filepath = os.path.join(current_app.config['UPLOAD_FOLDER'], filename)
         form.file.data.save(filepath)
@@ -44,7 +44,7 @@ def songs_upload():
 
         current_user.songs = list_of_songs
         db.session.commit()
-
+        log.info(user, 'has uploaded their music list: ' + filename)
         return redirect(url_for('songs.songs_browse'))
     try:
         return render_template('upload.html', form=form)
